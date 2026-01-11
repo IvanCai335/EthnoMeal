@@ -80,15 +80,16 @@ struct MealDetailView: View {
                                 .foregroundColor(.primary)
                             
                             HStack {
-                                Slider(value: $eatenWeight, in: 0...500, step: 1)
-                                    .accentColor(.orange)
-                                
-                                Text("\(Int(eatenWeight))g")
+                                TextField("Weight", value: $eatenWeight, format: .number)
+                                    .keyboardType(.decimalPad)
                                     .font(.system(size: 18, weight: .bold, design: .monospaced))
-                                    .frame(width: 80)
-                                    .padding(.vertical, 8)
+                                    .padding()
                                     .background(Color(uiColor: .secondarySystemBackground))
                                     .cornerRadius(8)
+                                
+                                Text("g")
+                                    .font(.headline)
+                                    .foregroundColor(.secondary)
                             }
                         }
                         .padding(.vertical, 5)
