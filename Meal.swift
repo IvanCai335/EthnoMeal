@@ -10,6 +10,7 @@ struct Meal: Identifiable {
     let carbs: Int
     let ethnicity: String
     let description: String
+    var servingWeight: Int = 100 // Default to 100g for base calculation
 }
 
 struct FriendActivity: Identifiable {
